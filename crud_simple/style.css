@@ -1,0 +1,133 @@
+body > table{
+    width: 80%;
+}
+table{
+    border-collapse: collapse;
+    
+}
+table.list{
+    width: 100%;
+}
+/*                        
+th{
+    background-color: rgb(187, 6, 121);
+    color: white;
+} */
+td, th{
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr{
+    background-color: #dddddd;
+}
+input{
+    width:80%;
+    padding:5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form div.form-action-buttons{
+    text-align: right;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    margin-left: 60px;
+    /* background-color: #da610a */
+}
+form div.form-action-buttons input{
+    
+    background-color: #da610a;
+    color: white;
+    margin: 10px;
+}
+form{
+    display: flex;
+    /* justify-content:center;
+    align-items: center; */
+    width: 60%;
+background-color: white;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    /* border: 1px solid; */
+  box-shadow:5px 5px 5px #aaaaaa;
+}
+.main_master_header{
+width: 100%;
+padding: 5px;
+/* height: 30px; */
+background-color: #d8107c ;
+color: white;
+}
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;   
+}
+label.validation-error{
+    color: red;
+    margin-left: 5px;
+}
+.hide{
+    display: none;
+}
+.master_form_main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main_master{
+    width:40%;
+    margin: 10px;
+}
+.new_exist_master{
+    display: flex;
+    justify-content: space-between;
+
+}
+.new_exist_master button{
+ background-color: #da610a;
+ padding: 10px;
+ margin: 5px;
+ border: 0;
+ color: white;
+
+}
+.master_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form1{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+    /* display: none; */
+}
+.matser_add_new_validation{
+    color:red;
+}
+.master_container_new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#meeting_master_edit_button{
+    background-color: #da610a;
+    border: 0;
+    padding: 5px;
+    color: white;
+}

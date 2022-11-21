@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="ISO-8859-1">
+    <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+    <!-- <link rel="stylesheet" href="dropdown-scroll.css"> -->
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/c5a21d3163.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>master_meeting</title>
+</head>
+
+<body>
+    <div class="master_container">
+
+        <form>
+            <div class="main_master_header" >Search</div>
+
+            <div class="master_form_main">
+            <div class="main_master">
+                <label>BRANCH_CODE</label>
+                <div>
+                    <input id='myInput_BRANCH_CODE_search' name="BRANCH_CODE_search" type='text'>
+                </div>
+            </div>
+         
+            <div class="main_master">
+                <label>CITY_CODE</label>
+                <div>
+                    <input id='myInput_LOCATION_CODE_search' name="CITY_CODE_search" type='text'>
+                </div>
+            </div>
+          </div>
+            <div class="form-action-buttons">
+                <input type="button" value="Search" onclick="searchTable()">
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="new_exist_master">
+        <button onclick="form_master_add()">Add</button>
+        <button> exit </button>
+    </div>
+    <table class="list" id="employeeList">
+        <thead>
+            <tr>
+                <th>MEETING_CENTER_CODE</th>
+                <th>AREA_CODE</th>
+                <th>BRANCH_CODE</th>
+                <th>LOCATION_CODE</th>
+                <th>CITY_CODE</th>
+                <th>NAME</th>
+                <th>UPDATE_TIME</th>
+                <th>EDIT</th>
+            </tr>
+        </thead>
+        <tbody id='myTable'>
+        </tbody>
+    </table>
+    <br>
+    <div class="master_container_new" id="form1">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div class="main_master_header" id="meeting_master_header_text"></div>
+          <div class="master_form_main">
+            <div class="main_master">
+                <label>MEETING_CENTER_CODE</label>
+                <div>
+                    <input type="text" name="Meeting_center_code" id="Meeting_center_code_master">
+                </div>
+                <div class="matser_add_new_validation"><span id="Meeting_center_code_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>AREA_CODE</label>
+                <div>
+                    <input type="text" name="AREA_CODE" id="AREA_CODE_master">
+                </div>
+                <div><span id="AREA_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>BRANCH_CODE</label>
+                <div>
+                    <input type="text" name="BRANCH_CODE" id="BRANCH_CODE_master">
+                </div>
+                <div><span id="BRANCH_CODE_master_error"></span></div>
+
+            </div>
+            <div class="main_master">
+                <label>LOCATION_CODE</label>
+                <div>
+                    <input type="text" name="LOCATION_CODE" id="LOCATION_CODE_master">
+                </div>
+                <div><span id="LOCATION_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>CITY_CODE</label>
+                <div>
+                    <input type="text" name="CITY_CODE" id="CITY_CODE_master">
+                </div>
+                <div><span id="CITY_CODE_master_error"></span></div>
+            </div>
+            <div class="main_master">
+                <label>NAME</label>
+                <div>
+                    <input type="text" name="NAME" id="NAME_master" onkeypress="NAME_master_onkeypress()">
+                </div>
+                <div><span id="NAME_master_error"></span></div>
+            </div>
+            <!-- <div class="main_master">
+                <label>UPDATE_TIME</label>
+                <div>
+                    <input type="datetime-local" name="UPDATE_TIME" id="UPDATE_TIME_master">
+                </div>
+                <div><span id="UPDATE_TIME_master_error"></span></div>
+            </div> -->
+          </div>
+            <div class="form-action-buttons">
+                <input type="submit" value="Save" id="form1show" >
+                <input type="button" value="cancel" id="form1show" onclick="form_master_cancel()" >
+            </div>
+        </form> 
+    </div>  
+    <script src="script.js"></script>
+</body>
+
+</html>
